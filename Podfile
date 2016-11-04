@@ -9,6 +9,9 @@ target 'SocialLoginFirebase' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
 
   target 'SocialLoginFirebaseTests' do

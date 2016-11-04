@@ -14,6 +14,7 @@
 		263C58CB1DBE7B16004D980E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263C58C91DBE7B16004D980E /* LaunchScreen.storyboard */; };
 		263C58D61DBE7B16004D980E /* SocialLoginFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C58D51DBE7B16004D980E /* SocialLoginFirebaseTests.swift */; };
 		263C58E11DBE7B16004D980E /* SocialLoginFirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C58E01DBE7B16004D980E /* SocialLoginFirebaseUITests.swift */; };
+		26E5F1971DCD0DD600D56B19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26E5F1961DCD0DD600D56B19 /* GoogleService-Info.plist */; };
 		49C9D3BF4F880870D425F0B1 /* Pods_SocialLoginFirebaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD1DCA81AC669870F58968D /* Pods_SocialLoginFirebaseTests.framework */; };
 		52C51230C520715DCDCEF48E /* Pods_SocialLoginFirebaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E4E06F5065725E4090566 /* Pods_SocialLoginFirebaseUITests.framework */; };
 		F458B3549D26F6F0D27632C2 /* Pods_SocialLoginFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4710AD711DF356293CDBCE9 /* Pods_SocialLoginFirebase.framework */; };
@@ -51,6 +52,7 @@
 		263C58E01DBE7B16004D980E /* SocialLoginFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginFirebaseUITests.swift; sourceTree = "<group>"; };
 		263C58E21DBE7B16004D980E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26545D7F1DBE8C9D0021D771 /* SocialLoginFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLoginFirebase.entitlements; sourceTree = "<group>"; };
+		26E5F1961DCD0DD600D56B19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CD1DCA81AC669870F58968D /* Pods_SocialLoginFirebaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLoginFirebaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		665292AF581B564C672C0A41 /* Pods-SocialLoginFirebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLoginFirebaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLoginFirebaseUITests/Pods-SocialLoginFirebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4710AD711DF356293CDBCE9 /* Pods_SocialLoginFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLoginFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				263C58C41DBE7B16004D980E /* Main.storyboard */,
 				263C58C71DBE7B16004D980E /* Assets.xcassets */,
 				263C58C91DBE7B16004D980E /* LaunchScreen.storyboard */,
+				26E5F1961DCD0DD600D56B19 /* GoogleService-Info.plist */,
 				263C58CC1DBE7B16004D980E /* Info.plist */,
 			);
 			path = SocialLoginFirebase;
@@ -238,7 +241,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = mrGott;
 				TargetAttributes = {
 					263C58BC1DBE7B16004D980E = {
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				263C58CB1DBE7B16004D980E /* LaunchScreen.storyboard in Resources */,
+				26E5F1971DCD0DD600D56B19 /* GoogleService-Info.plist in Resources */,
 				263C58C81DBE7B16004D980E /* Assets.xcassets in Resources */,
 				263C58C61DBE7B16004D980E /* Main.storyboard in Resources */,
 			);
@@ -514,6 +518,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -563,6 +568,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

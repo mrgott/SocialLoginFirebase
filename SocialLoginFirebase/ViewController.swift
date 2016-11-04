@@ -9,15 +9,26 @@
 import UIKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let fbLoginButton = FBSDKLoginButton()
-        fbLoginButton.delegate = self
-        fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        //let fbLoginButton = FBSDKLoginButton()
+        //fbLoginButton.delegate = self
+        let fbLoginButton: UIButton = {
+            let fbLoginButton = UIButton(type: .system)
+            fbLoginButton.backgroundColor = .blue
+            fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
+            fbLoginButton.setTitle("Login with Facebook", for: .normal)
+            fbLoginButton.setTitleColor(.white, for: .normal)
+            fbLoginButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+            fbLoginButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+            
+            return fbLoginButton
+        }()
+        
         
         view.addSubview(fbLoginButton)
         fbLoginButton.widthAnchor.constraint(equalToConstant: view.frame.width - 32).isActive = true
@@ -27,20 +38,35 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
     }
     
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    func handleCustomFBLogin() {
         
-        print("Did Log Out")
+        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) { (loginResul, error) in
+            
+            if error != nil {
+                print(error ?? "")
+                return
+            }
+            
+            self.fbHandleGetUserData()
+            
+        }
         
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+    func fbHandleGetUserData() {
         
-        if error != nil {
-            print(error.localizedDescription)
-            return
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, error) in
+            
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            
+            guard let fbResult = result else { return }
+            print(fbResult)
+            
         }
-        
-        print("Successfully Logged In!")
+    
     }
 
     override func didReceiveMemoryWarning() {
